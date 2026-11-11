@@ -41,7 +41,7 @@ class fDua : Fragment() {
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
-        
+        val _tvHasil = view.findViewById<TextView>(R.id.tvHasil)
     }
 
     companion object {
