@@ -1,6 +1,7 @@
 package com.example.latfragmentsederhana
 
 import android.os.Bundle
+import android.widget.Button
 import androidx.activity.enableEdgeToEdge
 import androidx.appcompat.app.AppCompatActivity
 import androidx.core.view.ViewCompat
@@ -16,5 +17,8 @@ class MainActivity : AppCompatActivity() {
             v.setPadding(systemBars.left, systemBars.top, systemBars.right, systemBars.bottom)
             insets
         }
+
+        val btnFragmentSatu = findViewById<Button>(R.id.btnFragmentSatu)
+        val btnFragmentDua = findViewById<Button>(R.id.btnFragmentDua)
     }
 }
