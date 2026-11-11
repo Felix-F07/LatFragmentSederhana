@@ -6,6 +6,7 @@ import androidx.activity.enableEdgeToEdge
 import androidx.appcompat.app.AppCompatActivity
 import androidx.core.view.ViewCompat
 import androidx.core.view.WindowInsetsCompat
+import androidx.fragment.app.Fragment
 
 class MainActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -20,5 +21,14 @@ class MainActivity : AppCompatActivity() {
 
         val btnFragmentSatu = findViewById<Button>(R.id.btnFragmentSatu)
         val btnFragmentDua = findViewById<Button>(R.id.btnFragmentDua)
+    }
+
+    private fun replaceFragment(fragment: Fragment){
+        val fragmentManager= supportFragmentManager
+        val fragmentTransaction = fragmentManager.beginTransaction()
+
+        fragmentTransaction.replace(R.id.fragment_container,fragment)
+        fragmentTransaction.addToBackStack(null)
+        fragmentTransaction.commit()
     }
 }
