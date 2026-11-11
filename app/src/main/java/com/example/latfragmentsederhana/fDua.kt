@@ -42,6 +42,17 @@ class fDua : Fragment() {
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
         val _tvHasil = view.findViewById<TextView>(R.id.tvHasil)
+
+        var namaDiterima =""
+        var alamatDiterima=""
+        arguments?.let{
+            namaDiterima = it.getString("Nama") ?: ""
+            alamatDiterima = it.getString("Alamat") ?: ""
+        }
+
+        if (namaDiterima != "") {
+            _tvHasil.text = "Halo $namaDiterima! Alamat Anda $alamatDiterima"
+        }
     }
 
     companion object {
