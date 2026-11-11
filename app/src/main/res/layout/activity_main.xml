@@ -9,7 +9,17 @@
     android:orientation="vertical"
     tools:context=".MainActivity">
 
+    <Button
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/btnFragmentSatu"
+        android:text="Fragment Satu"/>
 
+    <Button
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/btnFragmentDua"
+        android:text="Fragment Dua"/>
 
 
 
